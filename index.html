@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div"></div>
+  <div id="container"></div>
+</body>
+<script src="./js/three.min.js"></script>
+<script src="./js/photo-sphere-viewer.min.js"></script>
+<script>
+
+  // window.onload(()=>{
+    init();
+    function init(){
+      var PSV = new PhotoSphereViewer({
+        panorama:"http://127.0.0.1:7099/img3.png",
+        container: div,
+        time_anim:false,
+        navbar:true,
+        size:{
+          width: '500px',
+          height:'500px'
+        },
+        title_down_max: Math.PI /7,
+        title_up_max: Math.PI /7
+      })
+      PSV.toggleDeviceOrientation()
+      console.log(PSV)
+    }
+  // })
+</script>
+</html>
